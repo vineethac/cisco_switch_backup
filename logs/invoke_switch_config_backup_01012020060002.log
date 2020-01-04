@@ -1,0 +1,106 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200101180003
+Username: DELLHCILAB\vineetha
+RunAs User: DELLHCILAB\vineetha
+Machine: RACK7FLEXVM (Microsoft Windows NT 10.0.14393.0)
+Host Application: powershell.exe -command &{C:\cisco_switch_backup-master\invoke_switch_config_backup.ps1}
+Process ID: 2940
+PSVersion: 5.1.14393.3383
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14393.3383
+BuildVersion: 10.0.14393.3383
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\cisco_switch_backup-master\logs\invoke_switch_config_backup_01012020060002.log
+VERBOSE: invoke_switch_config_backup.ps1 - <ScriptBlock><Begin> - LineNo : 51 - [EndRegion] log the current script version in use
+Collecting secure password
+Collecting IP address of Dell switches from switch list
+Creating new SSH session to 100.80.103.92
+VERBOSE: Using SSH Username and Password authentication for connection.
+WARNING: Host key is not being verified since Force switch is used.
+Connected to Switch. This will take few seconds.
+copy running-config tftp://100.80.129.2/Cisco/100.80.103.92-DATE-01-01-2020-06-00-07.txt VRF management
+Running config copied to tftp://100.80.129.2/Cisco/100.80.103.92
+Creating new SSH session to 100.80.103.93
+VERBOSE: Using SSH Username and Password authentication for connection.
+WARNING: Host key is not being verified since Force switch is used.
+Connected to Switch. This will take few seconds.
+copy running-config tftp://100.80.129.2/Cisco/100.80.103.93-DATE-01-01-2020-06-00-15.txt VRF management
+Running config copied to tftp://100.80.129.2/Cisco/100.80.103.93
+Creating new SSH session to 100.80.103.42
+VERBOSE: Using SSH Username and Password authentication for connection.
+WARNING: Host key is not being verified since Force switch is used.
+Connected to Switch. This will take few seconds.
+copy running-config tftp://100.80.129.2/Cisco/100.80.103.42-DATE-01-01-2020-06-00-23.txt VRF management
+Running config copied to tftp://100.80.129.2/Cisco/100.80.103.42
+Creating new SSH session to 100.80.103.43
+VERBOSE: Using SSH Username and Password authentication for connection.
+WARNING: Host key is not being verified since Force switch is used.
+Connected to Switch. This will take few seconds.
+copy running-config tftp://100.80.129.2/Cisco/100.80.103.43-DATE-01-01-2020-06-00-30.txt VRF management
+Running config copied to tftp://100.80.129.2/Cisco/100.80.103.43
+Creating new SSH session to 100.80.103.44
+VERBOSE: Using SSH Username and Password authentication for connection.
+WARNING: Host key is not being verified since Force switch is used.
+Connected to Switch. This will take few seconds.
+copy running-config tftp://100.80.129.2/Cisco/100.80.103.44-DATE-01-01-2020-06-00-38.txt VRF management
+Running config copied to tftp://100.80.129.2/Cisco/100.80.103.44
+Creating new SSH session to 100.80.47.213
+VERBOSE: Using SSH Username and Password authentication for connection.
+WARNING: Host key is not being verified since Force switch is used.
+New-SSHSession : A connection attempt failed because the connected party did not properly respond after a period of 
+time, or established connection failed because connected host has failed to respond
+At C:\cisco_switch_backup-master\invoke_switch_config_backup.ps1:89 char:14
++ ...    $SWssh = New-SSHSession -ComputerName $list[$i] -Credential $cred  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (Renci.SshNet.SshClient:SshClient) [New-SSHSession], SocketException
+    + FullyQualifiedErrorId : SSH.NewSshSession
+New-SSHSession : A connection attempt failed because the connected party did not properly respond
+after a period of time, or established connection failed because connected host has failed to
+respond
+At C:\cisco_switch_backup-master\invoke_switch_config_backup.ps1:89 char:14
++ ...    $SWssh = New-SSHSession -ComputerName $list[$i] -Credential $cred  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (Renci.SshNet.SshClient:SshClient) [New-SSHSessio
+   n], SocketException
+    + FullyQualifiedErrorId : SSH.NewSshSession
+
+Connected to Switch. This will take few seconds.
+copy running-config tftp://100.80.129.2/Cisco/100.80.47.213-DATE-01-01-2020-06-01-06.txt VRF management
+PS>TerminatingError(Invoke-SSHCommand): "Cannot bind argument to parameter 'SSHSession' because it is null."
+Failed to save running config to TFTP location!
+You cannot call a method on a null-valued expression.
+At C:\cisco_switch_backup-master\invoke_switch_config_backup.ps1:110 char:5
++                 $PSCmdlet.ThrowTerminatingError($PSItem)
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+You cannot call a method on a null-valued expression.
+At C:\cisco_switch_backup-master\invoke_switch_config_backup.ps1:110 char:5
++                 $PSCmdlet.ThrowTerminatingError($PSItem)
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+
+Creating new SSH session to 100.80.180.45
+VERBOSE: Using SSH Username and Password authentication for connection.
+WARNING: Host key is not being verified since Force switch is used.
+Connected to Switch. This will take few seconds.
+copy running-config tftp://100.80.129.2/Cisco/100.80.180.45-DATE-01-01-2020-06-01-13.txt VRF management
+Running config copied to tftp://100.80.129.2/Cisco/100.80.180.45
+Creating new SSH session to 100.80.180.44
+VERBOSE: Using SSH Username and Password authentication for connection.
+WARNING: Host key is not being verified since Force switch is used.
+Connected to Switch. This will take few seconds.
+copy running-config tftp://100.80.129.2/Cisco/100.80.180.44-DATE-01-01-2020-06-01-21.txt VRF management
+Running config copied to tftp://100.80.129.2/Cisco/100.80.180.44
+PS>$global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20200101180125
+**********************
