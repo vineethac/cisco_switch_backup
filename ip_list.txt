@@ -1,9 +1,6 @@
-100.80.103.92
-100.80.103.93
-100.80.103.42
-100.80.103.43
-100.80.103.44
-100.80.47.213
-100.80.180.45
-100.80.180.44
+Cisco switch1 IP
+Cisco switch2 IP
+Cisco switch3 IP
+Cisco switch4 IP
+Cisco switch5 IP
 
