@@ -98,11 +98,11 @@ Process {
 			Start-Sleep -s 3
 
 			$filename =(Get-Date).tostring("dd-MM-yyyy-hh-mm-ss")
-			$cmd_backup = "copy running-config tftp://100.80.129.2/Cisco/$sw_ip-DATE-$filename.txt VRF management"
+			$cmd_backup = "copy running-config tftp://192.168.105.10/Cisco/$sw_ip-DATE-$filename.txt VRF management"
 			Show-Message -Message $cmd_backup
 			try {
 				$config_backup = invoke-sshcommand -Command $cmd_backup -SSHSession $SWssh 
-				Show-Message -Message "Running config copied to tftp://100.80.129.2/Cisco/$sw_ip"	
+				Show-Message -Message "Running config copied to tftp://192.168.105.10/Cisco/$sw_ip"	
 			}
 			catch {
 				Show-Message -Severity high -Message "Failed to save running config to TFTP location!"
